@@ -1,0 +1,68 @@
+{
+    "name": "PlayerController",
+    "maps": [
+        {
+            "name": "Moving",
+            "id": "0b81c4b6-c5fc-4ab7-805e-6fd46c58e7c7",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "d12b685a-185d-405a-962f-ddae8324e31e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d6332188-d955-4e8a-823d-94a2f879523b",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Weapon",
+            "id": "384ace87-7821-4dc7-a6f3-7ea2bfa74159",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "bafaa36d-e1dc-42d9-be51-da0410841d6a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62c73dea-6bbc-40ed-b10a-a0e72e06a4ec",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
+            "devices": []
+        }
+    ]
+}

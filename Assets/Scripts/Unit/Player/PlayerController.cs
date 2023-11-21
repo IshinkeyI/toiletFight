@@ -46,7 +46,7 @@ namespace Unit.Player
 
         protected override void Death()
         {
-            throw new System.NotImplementedException();
+            Events.Events.OnLevelFailed();
         }
 
         public override void GetDamage(int damage)

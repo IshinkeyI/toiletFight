@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unit.Player;
+using UnityEngine;
 
 namespace Map
 {
@@ -8,7 +9,13 @@ namespace Map
 
 		public void InstantiatePlayer()
 		{
-			Instantiate(characterSo.PlayerPrefab, transform.position, Quaternion.identity);
+			var savePrefs = FindObjectOfType<SavePrefs.SavePrefs>();
+			var player = Instantiate(characterSo.PlayerPrefab, transform.position, Quaternion.identity).
+					GetComponent<PlayerController>();
+			player.Damage = savePrefs.SaveData.Damage;
+			player.Health = savePrefs.SaveData.Health;
+			
+			FindObjectOfType<CameraController.CameraController>().SetFollow(player.transform);
 		}
 	}
 }

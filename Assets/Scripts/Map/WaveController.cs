@@ -11,12 +11,11 @@ namespace Map
         [SerializeField] private List<EnemySpawner> spawners;
         [field: SerializeField] public int EnemiesInWaveCount { get; private set; }
 
-        private List<Enemy.Enemy> _enemies;
-        
+        private List<Unit.Enemy.Enemy> _enemies;
 
         public void NextWave()
         {
-            _enemies = new List<Enemy.Enemy>();
+            _enemies = new List<Unit.Enemy.Enemy>();
             int count = EnemiesInWaveCount;
             foreach (var enemySpawner in spawners.Where(s => s.IsSpawned == false))
             {
@@ -38,6 +37,13 @@ namespace Map
             if (_enemies.Count != 0) return;
             
             Events.Events.OnFightComplete();
+        }
+
+        public Unit.Enemy.Enemy GetNearestEnemy(Vector3 position)
+        {
+            return  _enemies.OrderBy(enemy =>
+                Vector3.Distance(enemy.Transform.position, position)).ToArray()[0];
+            
         }
     }
 }

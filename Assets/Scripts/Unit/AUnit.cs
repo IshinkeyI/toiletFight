@@ -17,8 +17,8 @@ namespace Unit
 
         #region properties
 
-        [field: SerializeField] public int Health { get; protected set; }
-        [field: SerializeField] public int Damage { get; private set; }
+        [field: SerializeField] public int Health { get; set; }
+        [field: SerializeField] public int Damage { get; set; }
         public bool IsDead { get; protected set; }
         public Transform Transform { get; private set; }
         public NavMeshAgent NavMeshAgent { get; private set; }

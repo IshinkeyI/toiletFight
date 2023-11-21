@@ -5,12 +5,12 @@ namespace Map
 {
     public class MapController : MonoBehaviour
     {
-        public int Level;
-
         [SerializeField] private List<GameObject> spawnersList;
         [SerializeField] private PlayerSpawner playerSpawner;
         
         private WaveController _waveController;
+        
+        private SavePrefs.SavePrefs _savePrefs;
 
         private void OnEnable()
         {
@@ -26,10 +26,15 @@ namespace Map
 
         private void Awake()
         {
+            _savePrefs = FindObjectOfType<SavePrefs.SavePrefs>();
             foreach (var o in spawnersList) 
                 o.SetActive(false);
 
-            int currentLevel = spawnersList.Count > Level ? Level : spawnersList.Count - 1;
+            int currentLevel =
+                spawnersList.Count > _savePrefs.SaveData.Levels 
+                ? _savePrefs.SaveData.Levels
+                : spawnersList.Count - 1;
+            
             spawnersList[currentLevel].SetActive(true);
             _waveController = spawnersList[currentLevel].GetComponent<WaveController>();
 

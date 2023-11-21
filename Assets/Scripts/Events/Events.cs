@@ -9,6 +9,10 @@ namespace Events
 
         public static Action AttackButton;
         public static Action DefenseButton;
+
+        public static Action PropertyChanged;
+
+        public static Action LevelFailed;
         
         public static void OnLevelComplete()
         {
@@ -28,6 +32,16 @@ namespace Events
         public static void OnDefenseButton()
         {
             DefenseButton?.Invoke();
+        }
+
+        public static void OnPropertyChanged()
+        {
+            PropertyChanged?.Invoke();
+        }
+
+        public static void OnLevelFailed()
+        {
+            LevelFailed?.Invoke();
         }
     }
 }

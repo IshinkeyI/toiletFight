@@ -39,11 +39,9 @@ namespace Map
             Events.Events.OnFightComplete();
         }
 
-        public Unit.Enemy.Enemy GetNearestEnemy(Vector3 position)
+        public Unit.Enemy.Enemy GetNearestEnemy()
         {
-            return  _enemies.OrderBy(enemy =>
-                Vector3.Distance(enemy.Transform.position, position)).ToArray()[0];
-            
+            return  _enemies.First(x => !x.IsDead);
         }
     }
 }

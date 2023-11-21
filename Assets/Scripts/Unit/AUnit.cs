@@ -24,12 +24,12 @@ namespace Unit
         public NavMeshAgent NavMeshAgent { get; private set; }
         public Animator Animator { get; private set; }
         #endregion
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             _getDamageEvent += GetDamage;
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             _getDamageEvent -= GetDamage;
         }

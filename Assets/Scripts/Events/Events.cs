@@ -7,6 +7,9 @@ namespace Events
         public static Action FightComplete;
         public static Action LevelComplete;
 
+        public static Action AttackButton;
+        public static Action DefenseButton;
+        
         public static void OnLevelComplete()
         {
             LevelComplete?.Invoke();
@@ -15,6 +18,16 @@ namespace Events
         public static void OnFightComplete()
         {
             FightComplete?.Invoke();
+        }
+
+        public static void OnAttackButton()
+        {
+            AttackButton?.Invoke();
+        }
+
+        public static void OnDefenseButton()
+        {
+            DefenseButton?.Invoke();
         }
     }
 }

@@ -252,9 +252,10 @@ GameObject:
   - component: {fileID: 1081487412932567955}
   - component: {fileID: 3520187575657823786}
   - component: {fileID: 7426557752607016946}
+  - component: {fileID: 8614926782564311769}
   m_Layer: 0
   m_Name: GMan
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -347,6 +348,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textTransform: {fileID: 8799176367923465822}
   healthImage: {fileID: 5506577731040887891}
+--- !u!136 &8614926782564311769
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8691870815090271267}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.04
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!1 &9090870284924398341
 GameObject:
   m_ObjectHideFlags: 0
